@@ -1,0 +1,35 @@
+#slider {
+    width: 600px;
+    height: 400px;
+    margin: 100px auto 0 auto;
+    overflow: hidden;
+}
+
+.container
+{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+.slider__item 
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+/* #slider .slides {
+    display: flex;
+    animation-name: pociag-w-lewo;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes pociag-w-lewo {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-2000px);
+    }
+} */
