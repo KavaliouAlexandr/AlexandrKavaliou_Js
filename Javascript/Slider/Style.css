@@ -1,31 +1,28 @@
-#slider {
-    width: 600px;
-    height: 400px;
-    margin: 100px auto 0 auto;
-    overflow: hidden;
-}
 
 .container
 {
-    max-width: 700px;
-    margin: 0 auto;
+   max-width: 1400px;
+   margin: 30px auto; 
+   background-color: darkgray;
+   padding: 30px;
 }
 
-
-.slider__item 
-{
-    flex: 0 0 100%;
-    max-width: 100%;
+.slider {
+    width: 443px;
+    height: 591px;
+    margin: 100px auto 0 auto;
+    overflow: hidden;
 }
-/* #slider .slides {
+.slides {
+    width: 443px;
+    height: 591px;
     display: flex;
-    animation-name: pociag-w-lewo;
-    animation-duration: 4s;
-    animation-delay: 1s;
-    animation-timing-function: ease-in-out;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
 }
 
-@keyframes pociag-w-lewo {
+/* @keyframes pociag-w-lewo {
     0% {
         transform: translateX(0);
     }
