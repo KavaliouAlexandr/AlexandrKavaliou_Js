@@ -2,6 +2,20 @@ let licznik = 0
 const main = document.querySelector('main')
 const slides = document.querySelector('.slides')
 
+const intervalRef = setInterval( 
+    () => {
+        licznik += 443
+        if(licznik > 1329){
+            licznik = 0
+        }
+
+        slides.style.left = -licznik + 'px'
+        
+        main.innerHTML='From interval ' + licznik / 443
+    },
+    5000
+)
+
 
 document.querySelector('.next').addEventListener('click', () => {
     licznik = licznik + 443;
@@ -32,14 +46,7 @@ document.querySelector('.prev').addEventListener('click', () => {
 //     2000
 // )
 
-// const intervalRef = setInterval( 
-//     () => {
-//         main.innerHTML='From interval' + licznik++
-//     },
-//     4000
-// )
-// // kasujemy setInterval
-// clearInterval(intervalRef)
+
 
 // // kasujemy setTimeout
 // clearTimeout(intervalRef)
