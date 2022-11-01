@@ -53,7 +53,8 @@ body {
 
 .btn-map-list {
     list-style: none;
-    
+    display: flex;	
+    justify-content: center;	
 }
 
 .btn-map-list > li {
@@ -61,16 +62,19 @@ body {
     margin-top: 40px;
     float: left;
     position: relative;
+    
 }
 
 
 .record {
     font-size: large;
-    margin-left: 335px;
+    
+    margin-left: 200px;
 }
 
 .play {
     font-size: large;
-    margin-right: 50px;
+    margin-right: 200px;
+    
 }
 
