@@ -4,9 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./Style.css">
 </head>
 <body>
-    <audio src="./sounds/clap.wav" controls id="clap"></audio>
-    <script src="../drumkit/drumkit.js"></script>
+    <div class="container">
+        <ul class="key-map-list">
+            <li class="s1">
+                <kbd class="key-code">A</kbd>
+                <audio class="audio" src="./sounds/boom.wav" controls id="s1"></audio>
+            </li>
+            <li class="s2">
+                <kbd class="key-code">S</kbd>
+                <audio class="audio" src="./sounds/clap.wav" controls id="s2"></audio>
+            </li>
+            <li class="s3">
+                <kbd class="key-code">D</kbd>
+                <audio class="audio" src="./sounds/hihat.wav" controls id="s3"></audio>
+            </li>
+            <li class="s4">
+                <kbd class="key-code">F</kbd>
+                <audio class="audio" src="./sounds/kick.wav" controls id="s4"></audio>
+            </li>
+            <li class="s5">
+                <kbd class="key-code">G</kbd>
+                <audio class="audio" src="./sounds/openhat.wav" controls id="s5"></audio>
+            </li>
+            <li class="s6">
+                <kbd class="key-code">H</kbd>
+                <audio class="audio" src="./sounds/openhat.wav" controls id="s6"></audio>
+            </li>
+        </ul>
+</div>
+
+<div class="container2">
+    <ul class="btn-map-list">
+        <li class="btn1">
+            <button class="record">Record</button>
+            <button class="play">Play</button>
+        </li>
+        <li class="btn2">
+            <button class="record">Record</button>
+            <button class="play">Play</button>
+        </li>
+        <li class="btn3">
+            <button class="record">Record</button>
+            <button class="play">Play</button>
+        </li>
+    </ul>
+</div>
+    <script src="drumkit.js"></script>
 </body> 
+
 </html>

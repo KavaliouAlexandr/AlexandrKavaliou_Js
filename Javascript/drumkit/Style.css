@@ -1,0 +1,76 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #fff;
+}
+
+.container {
+	margin: 30px auto 0;
+	width: 1400px;
+	text-align: center;
+}
+
+.key-map-list {
+	list-style: none;
+	color: #fff;
+	text-align: center;
+    
+}
+
+.key-map-list > li {
+	
+    margin-top: 40px;
+    font-size: 60px;
+    float: left;
+}
+
+.key-code {
+
+   
+	color: #444;
+    background-color: #eaeaea;
+    
+    padding: 1px 27px;
+    border-radius: 4px;
+    border: 3px solid #aaa;
+    margin-right: 65px;
+    margin-left: 65px;
+    text-align: center;
+}
+
+.audio {
+    position:absolute;
+    visibility: hidden;
+}
+
+.container2 {
+    
+    padding-top: 250px;
+    width: 1900px;
+    float: left;
+    
+}
+
+.btn-map-list {
+    list-style: none;
+    
+}
+
+.btn-map-list > li {
+	
+    margin-top: 40px;
+    float: left;
+    position: relative;
+}
+
+
+.record {
+    font-size: large;
+    margin-left: 335px;
+}
+
+.play {
+    font-size: large;
+    margin-right: 50px;
+}
+
