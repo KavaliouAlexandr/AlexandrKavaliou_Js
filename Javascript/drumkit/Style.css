@@ -38,11 +38,6 @@ body {
     text-align: center;
 }
 
-.audio {
-    position:absolute;
-    visibility: hidden;
-}
-
 .container2 {
     
     padding-top: 250px;
