@@ -22,7 +22,9 @@ const KeyToSound = {
     'd': document.querySelector('#s3'),
     'f': document.querySelector('#s4'),
     'g': document.querySelector('#s5'),
-    'h': document.querySelector('#s6')
+    'h': document.querySelector('#s6'),
+    'r': document.querySelector('#r'),
+    'p': document.querySelector('#p')
 }
 
 function onKeyPress(event) {
@@ -33,3 +35,6 @@ function playSound(sound) {
     sound.currentTime = 0
     sound.play()
 }
+
+
+  
