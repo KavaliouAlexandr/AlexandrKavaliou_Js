@@ -54,11 +54,7 @@ body {
     justify-content: center;
 }
 
-.playing {
-    transform: scale(1.1);
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
-}
+
 
 .record {
     color: #444;
@@ -119,4 +115,30 @@ body {
     margin-right: 200px;
     
 } */
+
+.recordup {
+    color: rgb(250, 167, 0);
+    background-color: #000000;
+    
+    padding: 1px 27px;
+    border-radius: 4px;
+    border: 3px solid rgb(210, 210, 210);
+    margin-right: 35px;
+    margin-left: 35px;
+    display: flex;	
+    justify-content: center;
+}
+
+.playing {
+    color: #db0000;
+    background-color: #444;
+    
+    padding: 1px 27px;
+    border-radius: 4px;
+    border: 3px solid rgb(255, 255, 255);
+    margin-right: 35px;
+    margin-left: 35px;
+    display: flex;	
+    justify-content: center;
+}
 

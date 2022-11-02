@@ -51,17 +51,20 @@ function playSound(sound) {
 
 var channel = new Map()
 var popka = 1
-
+var Recording = false
 
 function Record() {
+    Recording = true
     popka++
+    document.querySelector('#Record').classList.add('recordup')
     // btnRecord1.classList.add('btn-record')
     if (popka === 2){
         channel.clear()
     }
     if (popka % 2 === 1){
         popka = 1
-        // classList.remove('btn-record')
+        document.querySelector('#Record').classList.remove('recordup')
+        Recording = false
         return
     }
     document.addEventListener('keypress', addToChannel)
@@ -88,6 +91,12 @@ function addToChannel(event) {
 }
 
 function Play(){
+    document.querySelector('#Playing').classList.add('playing')
+
+    if(Recording === true)
+    {
+        return
+    }
     console.log('start')
     var i = 0
     var keys = Array.from(channel.keys())
@@ -99,6 +108,7 @@ function Play(){
         setTimeout(
             () => {
                 if (i === channel.size){
+                    document.querySelector('#Playing').classList.remove('playing')
                     return
                 }
 
@@ -111,6 +121,8 @@ function Play(){
                 if (i < channel.size){
                     i++
                     timeoutFunc(time, i)
+
+
                 }
             },
             time
