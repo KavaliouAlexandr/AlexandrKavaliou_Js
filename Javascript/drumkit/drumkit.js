@@ -34,7 +34,9 @@ function onKeyPress(event) {
         Play()
     }
     else{
-        
+        console.log(event.key)
+        document.querySelector(`#${event.key}`).classList.add('key-play')
+        setTimeout(() => {document.querySelector(`#${event.key}`).classList.remove('key-play')}, 200)
         const sound = KeyToSound[event.key]
         playSound(sound)
     }

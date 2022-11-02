@@ -1,13 +1,13 @@
-html {
+/* html {
     margin: 50px;
     font-size: 10px;
-    background: url(./cat_caviar.jpg) center no-repeat;
+    background: url(./cat_caviar.jpg) center no-repeat ;
     background-size: cover;
-    width: 1920px;
+    width: 1800px;
     height: 900px;
     position: absolute;
    
-  }
+  } */
 
 body {
 	padding: 0;
@@ -136,6 +136,19 @@ body {
     padding: 1px 27px;
     border-radius: 4px;
     border: 3px solid rgb(255, 255, 255);
+    margin-right: 35px;
+    margin-left: 35px;
+    display: flex;	
+    justify-content: center;
+}
+
+.key-play {
+    color: rgb(254, 254, 254);
+    background-color: #3e3e3e;
+    
+    padding: 1px 27px;
+    border-radius: 4px;
+    border: 3px solid #aaa;
     margin-right: 35px;
     margin-left: 35px;
     display: flex;	
