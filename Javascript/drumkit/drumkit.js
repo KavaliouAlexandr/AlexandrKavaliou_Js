@@ -23,18 +23,98 @@ const KeyToSound = {
     'f': document.querySelector('#s4'),
     'g': document.querySelector('#s5'),
     'h': document.querySelector('#s6'),
-    'r': document.querySelector('#r'),
-    'p': document.querySelector('#p')
 }
 
 function onKeyPress(event) {
-    const sound = KeyToSound[event.key]
-    playSound(sound)
+    if(event.key === 'r')
+    {
+        Record()
+    }
+    else if(event.key === 'p') {
+        Play()
+    }
+    else{
+        
+        const sound = KeyToSound[event.key]
+        playSound(sound)
+    }
+    
 }
 function playSound(sound) {
+    if (!sound){
+        return
+    }
+    
     sound.currentTime = 0
     sound.play()
 }
 
+var channel = new Map()
+var popka = 1
 
-  
+
+function Record() {
+    popka++
+    // btnRecord1.classList.add('btn-record')
+    if (popka === 2){
+        channel.clear()
+    }
+    if (popka % 2 === 1){
+        popka = 1
+        // classList.remove('btn-record')
+        return
+    }
+    document.addEventListener('keypress', addToChannel)
+}
+
+
+function addToChannel(event) {
+    if (popka % 2 === 1)
+    {
+        popka = 1
+        return
+    }
+    if(event.key === 'r' && key-code === 82){
+        return
+    }
+    const sound = KeyToSound[event.key]
+    playSound(sound)
+
+    if (sound !== undefined){
+    channel.set(Date.now(), sound)
+    console.log(channel)
+    }
+
+}
+
+function Play(){
+    console.log('start')
+    var i = 0
+    var keys = Array.from(channel.keys())
+    var time = keys[1] - keys[0]
+
+    timeoutFunc(time, i)
+    
+    function timeoutFunc(time, i){
+        setTimeout(
+            () => {
+                if (i === channel.size){
+                    return
+                }
+
+                playSound(channel.get(keys[i]))
+                
+                if (i > 0){
+                    time = keys[i + 1] - keys[i]
+                }
+
+                if (i < channel.size){
+                    i++
+                    timeoutFunc(time, i)
+                }
+            },
+            time
+        )
+    }
+
+}
