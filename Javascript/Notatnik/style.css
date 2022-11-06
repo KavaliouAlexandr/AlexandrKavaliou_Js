@@ -1,0 +1,219 @@
+body {
+    /*Отступ*/
+   margin:0;
+    /*Шрифт*/
+    font-family: 'Montserrat', sans-serif;
+    /*Размер текста*/
+   font-size: 15px;
+   /*Межстрочный отстсуп*/
+   line-height: 1.6;
+   color: rgb(0, 0, 0);
+   
+}
+html
+{
+ scroll-behavior: smooth;
+}
+
+*,
+*:before
+*:after 
+
+{
+ /*Размер блока*/
+box-sizing: border-box;
+}
+ /*Всем заголовкам задает margin 0*/
+h1, h2, h3, h4, h5, h6
+{
+  margin: 0;
+}
+
+.container 
+{
+     /*Ширина*/
+   width: 100%;
+   max-width: 1200px;
+    /*Выравнивает по центру*/
+   margin: 0 auto;
+   
+}
+/* .section::before {
+    content: "";
+    display: block;
+    width: 950px;
+    height: 3px;
+    margin: 10px auto 0px;
+    background-color: #984bf0;
+} */
+
+.header
+{
+    width: 100%;
+    /*Делает эллемент невидимым для других эллементов*/
+    position: absolute;
+    /*Координаты обьекта*/
+    top: 0;
+    left: 0;
+    right: 0;
+    /*Переносит обьект поверх всего*/
+    z-index: 1000;
+    background-color: #3d0075;
+    
+}
+/* Растягивает эллементы по всей странице
+лого слева а кнопки справа*/
+.header__inner
+{
+    /* Добавляет границу отступа вокруг элемента(сверху)*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* Дает эллементам гибкость*/
+    display: flex;
+    /* Определяет пространство между и вокруг эллементов*/
+    justify-content: space-between;
+    /* Выравнивает как justify но сверху и снизу*/
+    align-items: center;
+    
+}
+
+/* Класс для лого*/
+.header__logo
+{
+    font-size: 30px;
+    /* Насыщенность шрифта*/
+    font-weight: 900;
+    color: #fff;
+}
+/* Класс для навигации*/
+.nav
+{
+    font-size: 14px;
+    /* Шрифт capslock*/
+    text-transform: uppercase;
+    font-weight: 900;
+}
+/* Класс для кнопок навигации*/
+.nav__link 
+{
+    /* Назначает свойства дисплею*/
+    display: inline-block;
+    /* Вертикально выравнивает элементы внутри класса*/
+    vertical-align: top;
+    /* отступ между эллементами*/
+    margin: 0 15px;
+    /* Положение эллемента устанавливается в зависимости
+    от исходного места*/
+    position: relative;
+   color: #fff;
+   /* Убирает подчеркивание ссылок */
+   text-decoration: none;
+   /* Длительность подсвечивания иконок*/
+   transition: color  .1s linear;
+}
+/* класс при наводе мышкой на навигацию*/
+.nav__link::after
+{
+  /* Генерирует содержимое*/
+  content: "";
+  /* Делает элемент блочным (увеличивает зону рааботы 
+  навода ссылки*/
+  display: block;
+  width: 100%;
+  height: 3px;
+  /*Убирает автоматическое подсвечивание полос под кнопками*/
+  display: none;
+
+  background-color: #984bf0;
+   /*элемент не виден для других*/
+  position: absolute;
+  top: 100%;
+  left: 0;
+  /*Устанавливет слой обьекта*/
+  z-index: 1;
+  /*Плавный переход*/
+  transition: opacity .1s linear;
+
+
+}
+/* Добававляет изменение цвета при наведении на кнопку*/
+.nav__link:hover
+{
+color: #baa5f5;
+}
+.nav__link:hover:after
+{
+    display: block;
+}
+
+
+.section
+{
+    padding: 10px 0px;
+    background-color:rgb(235, 226, 255);
+    width: 100%;
+    max-width: 1200px;
+    height: 800px;
+    /*Выравнивает по центру*/
+    margin: 0 auto;
+    position: relative;
+    border-color: #fff;
+    border-radius: 40px;
+    
+    
+}
+
+.fff::before
+{
+    content: "";
+    display: block;
+    width: 950px;
+    height: 3px;
+    margin: 10px auto 0px;
+    background-color: #984bf0;
+    
+}
+
+.fff
+{
+    text-align: center;
+    
+}
+.asasas
+{
+    font-size: 30px;
+    display: block;
+  
+    text-align: center;
+}
+.asasas__vvvv
+{
+    font-size: 30px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.input-field {
+    margin-top: 2rem;
+    margin-left: 10px;
+}
+
+.pop {
+    
+    height: 35px;
+    margin-top: 85px;
+}
+
+.pop::after {
+    
+    content: "";
+    display: block;
+    width: 950px;
+    height: 3px;
+    margin: 10px auto 0px;
+    background-color: #984bf0;
+    
+}
+  

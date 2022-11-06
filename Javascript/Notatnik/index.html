@@ -8,7 +8,49 @@
     <title>Document</title>
 </head>
 <body>
-    
+<NavBar class="NavBar">
+    <header class="header">
+        <!--Размещаем в центре шапку-->
+        <div class="container">
+                <!--Дополнительный класс для шапки-->
+            <div class="header__inner">
+                <div class="header__logo">Notatnik</div>
+        <!--Навигация (кнопки)-->
+                    <navigation class="nav"> 
+                        <a class="nav__link" href="index.html">Home</a>
+                        <a class="nav__link" href="index.html">Info</a>
+                    </navigation>
+                </div>
+            </div>
+        </div>
+    </header>
+</NavBar>
+<div class="pop">
+
+</div>
+
+<div class="section">
+    <div class="input-field">
+        <input
+          ref={ref}  
+          type="text"
+          id="title"
+          placeholder="Proszę wpisać nazwę zadania"
+          onKeyPress={keyPressHandler} 
+        />
+        <label htmlFor="title" className="active">
+          Proszę wpisać nazwę zadania
+        </label>
+      </div>
+
+</div>
+
+
+<p class="fff">
+    <div class="asasas">NOTATNIK
+        </div>
+        <div class="asasas__vvvv">
+            ALEXANDR KAVALIOU</div>
 <script src="./notatnik.js"></script>
 </body>
 </html>
