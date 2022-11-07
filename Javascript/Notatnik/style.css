@@ -216,4 +216,19 @@ color: #baa5f5;
     background-color: #984bf0;
     
 }
-  
+
+.input-field::after {
+
+    content: "";
+    display: block;
+    width: 950px;
+    height: 3px;
+    margin: 10px auto 0px;
+    background-color: #984bf0;
+}
+
+.container1{
+    width: 200px;
+    border: 5px;
+    border-color:#984bf0;
+}

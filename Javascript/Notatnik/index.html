@@ -31,18 +31,53 @@
 
 <div class="section">
     <div class="input-field">
-        <input
-          ref={ref}  
+        <input  
+        type="text"
+        id="title"
+        placeholder="Proszę wpisać nazwę zadania"/>
+      </label>
+      <input 
           type="text"
-          id="title"
-          placeholder="Proszę wpisać nazwę zadania"
-          onKeyPress={keyPressHandler} 
-        />
-        <label htmlFor="title" className="active">
-          Proszę wpisać nazwę zadania
+          id="text"
+          placeholder="Proszę wpisać text"/>
         </label>
+    </label>
+    <input 
+          class="color"
+          type="color"
+          id="color"/>
+        </label>
+    </label>
+    <!-- <button class="color" id="color">
+       COLOR
+    </button> -->
+    </label>
+        <button class="add" id="add">
+           ADD
+        </button>
       </div>
+      
+      <div id="listOfNotes" >
 
+
+        <!-- <div class="container1 none">
+            <p>
+                <h3>
+                    title
+                </h3>
+            </p>
+            <p>
+                <text>
+                    text
+                </text>
+            </p>
+            <p>
+                <text>
+                    date
+                </text>
+            </p>
+        </div>-->
+      </div>
 </div>
 
 
