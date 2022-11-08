@@ -31,12 +31,14 @@
 
 <div class="section">
     <div class="input-field">
-        <input  
+        <input 
+        class="input" 
         type="text"
         id="title"
         placeholder="Proszę wpisać nazwę zadania"/>
       </label>
       <input 
+          class="input" 
           type="text"
           id="text"
           placeholder="Proszę wpisać text"/>
@@ -57,7 +59,18 @@
         </button>
       </div>
       
-      <div id="listOfNotes" >
+      
+      <div class="Notes-show">
+        <div class="Notes">
+          NOTES  
+        </div>
+        <button class="show" id="show">
+            Show NOTES
+        </button>
+        <div id="listOfNotes"  class="ListOfNotes">
+
+        </div>
+    </div>
 
 
         <!-- <div class="container1 none">
@@ -77,7 +90,6 @@
                 </text>
             </p>
         </div>-->
-      </div>
 </div>
 
 

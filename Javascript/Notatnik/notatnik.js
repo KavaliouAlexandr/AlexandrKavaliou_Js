@@ -1,4 +1,5 @@
 const btnadd = document.querySelector('#add')
+const btnshow = document.querySelector('#show')
 
 btnadd.addEventListener('click', () => {
     var n = localStorage.length / 4
@@ -12,10 +13,17 @@ btnadd.addEventListener('click', () => {
     Show()
 })
 
+btnshow.addEventListener('click', () => {
+    document.querySelector(`#listOfNotes`).innerHTML = ``
+
+    Show()
+})
 
 
 
 function Show(){
+    document.querySelector(`#listOfNotes`).innerHTML = ``
+
     for(let i=0; i<localStorage.length / 4; i++) {
         var container = document.createElement('div')
         container.classList.add('container1')
