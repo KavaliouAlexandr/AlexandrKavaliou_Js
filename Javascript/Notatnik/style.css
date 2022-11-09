@@ -311,5 +311,6 @@ color: #baa5f5;
     color: white;
 }
 
-
-
+.pin {
+    margin-bottom: 4px;
+}
