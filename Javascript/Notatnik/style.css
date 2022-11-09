@@ -277,12 +277,20 @@ color: #baa5f5;
 .btn {
     background-color: #984bf0; 
     border: none;
+    border-radius: 40px;
     color: white;
     padding: 10px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
+    transition-duration: 0.4s;
 }
+
+.btn:hover {
+    background-color: #ec94fd; /* Green */
+    color: white;
+}
+
 
 
