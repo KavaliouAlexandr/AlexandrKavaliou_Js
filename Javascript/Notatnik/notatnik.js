@@ -33,7 +33,7 @@ function Show(){
         if(localStorage.getItem(`title${i}`) != null){
             var container = document.createElement('div')
             container.classList.add('container1')
-    
+            
         
             
             //title
@@ -62,8 +62,9 @@ function Show(){
             dateP.append(date)
             container.append(dateP)
     
-    
+            
             var del = document.createElement('button')
+            del.classList.add('btndel')
             del.innerHTML = 'delete'
             var delP = document.createElement('p')
             del.addEventListener('click', () => {

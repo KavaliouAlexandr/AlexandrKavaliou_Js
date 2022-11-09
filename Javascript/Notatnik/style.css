@@ -292,5 +292,24 @@ color: #baa5f5;
     color: white;
 }
 
+.btndel {
+    background-color: #000000; 
+    border: none;
+    border-radius: 40px;
+    color: white;
+    padding: 8px 32px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+}
+
+.btndel:hover {
+    background-color: #5e5e5e; /* Green */
+    color: white;
+}
+
 
 
