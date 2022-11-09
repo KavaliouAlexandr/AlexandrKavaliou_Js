@@ -153,7 +153,8 @@ color: #baa5f5;
     background-color:rgb(242, 237, 253);
     width: 100%;
     max-width: 1200px;
-    height: 800px;
+    height:fit-content;
+    min-height: 800px;
     /*Выравнивает по центру*/
     margin: 0 auto;
     position: relative;
@@ -273,5 +274,15 @@ color: #baa5f5;
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
 
+.btn {
+    background-color: #984bf0; 
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
 
 
