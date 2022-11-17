@@ -1,6 +1,5 @@
 const btnadd = document.querySelector('#add')
 const btnshow = document.querySelector('#show')
-const btndelete = document.querySelector('#delete')
 
 btnadd.addEventListener('click', () => {
     var n = 0
@@ -162,7 +161,7 @@ function createEditNote(i) {
 
     var buttons = document.createElement('p')
     var btnAccept = document.createElement('button')
-    btnAccept = innerHTML = 'Accept'
+    btnAccept.innerHTML = 'Accept'
     buttons.classList.add('btndel')
     btnAccept.addEventListener('click', function(){ Edit(i) } )
     btnAccept.append(buttons)
