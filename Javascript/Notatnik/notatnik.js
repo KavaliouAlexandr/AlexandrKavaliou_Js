@@ -121,16 +121,17 @@ function createNote(i) {
 function createEditNote(i) {
     var container = document.createElement('div')
     container.classList.add('container1')
+    container.style.backgroundColor = localStorage.getItem(`color${i}`)
     //pin
     var pin = document.createElement('input')
     var pinP = document.createElement('p')
     pin.id = 'NewPin'
     pin.type = 'checkbox'
-    pin.style.float = 'right'
     if(localStorage.getItem(`pin${i}`) === 'true'){
         pin.checked = true
     }
     pinP.append(pin)
+    container.append(pinP)
 
 
     var titleValue = localStorage.getItem(`title${i}`) 
@@ -152,25 +153,26 @@ function createEditNote(i) {
     //color
     var colorValue = localStorage.getItem(`color${i}`)
     var color = document.createElement('input')
+    var colorP = document.createElement('p')
     color.id = 'NewColor'
     color.type = 'color'
     color.value = colorValue
-    var colorP = document.createElement('p')
-    colorP.append('color')
-    container.append('colorP')
+    
+    colorP.append(color)
+    container.append(colorP)
 
     var buttons = document.createElement('p')
     var btnAccept = document.createElement('button')
     btnAccept.innerHTML = 'Accept'
-    buttons.classList.add('btndel')
+    btnAccept.classList.add('buttons')
     btnAccept.addEventListener('click', function(){ Edit(i) } )
-    btnAccept.append(buttons)
+    buttons.append(btnAccept)
 
     var btnCancel = document.createElement('button')
     btnCancel.innerHTML = 'Cancel'
-    btnAccept.classList.add('btndel')
-    btnAccept.addEventListener('click', Show )
-    btnCancel.append(buttons)
+    btnCancel.classList.add('buttons')
+    btnCancel.addEventListener('click', Show )
+    buttons.append(btnCancel)
 
     container.append(buttons)
     document.querySelector(`#listOfNotes`).append(container)

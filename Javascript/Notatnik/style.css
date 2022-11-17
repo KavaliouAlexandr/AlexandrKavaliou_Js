@@ -306,6 +306,22 @@ color: #baa5f5;
     transition-duration: 0.4s;
 }
 
+.buttons {
+    background-color: #000000; 
+    border: none;
+    border-radius: 40px;
+    color: white;
+    padding: 8px 32px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
 .btndel:hover {
     background-color: #5e5e5e; /* Green */
     color: white;
