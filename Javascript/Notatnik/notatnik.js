@@ -109,8 +109,123 @@ function createNote(i) {
     delP.append(del)
     container.append(delP)
 
-
-
+    var edit = document.createElement('button')
+    edit.classList.add('btndel')
+    edit.innerHTML = 'Edit'
+    var editP = document.createElement('p')
+    edit.addEventListener('click', function(){ btnEdit(i) })
+    editP.append(edit)
+    container.append(editP)
     document.querySelector(`#listOfNotes`).append(container)
+}
+
+function createEditNote(i) {
+    var container = document.createElement('div')
+    container.classList.add('container1')
+    //pin
+    var pin = document.createElement('input')
+    var pinP = document.createElement('p')
+    pin.id = 'NewPin'
+    pin.type = 'checkbox'
+    pin.style.float = 'right'
+    if(localStorage.getItem(`pin${i}`) === 'true'){
+        pin.checked = true
+    }
+    pinP.append(pin)
+
+
+    var titleValue = localStorage.getItem(`title${i}`) 
+    var titleP = document.createElement('p')    //js string
+    var title = document.createElement('input')
+    title.id = 'NewTitle' 
+    title.value = titleValue                          //js string => html <h3>
+    titleP.append(title)
+    container.append(titleP)
+    //text
+
+    var textValue = localStorage.getItem(`text${i}`)
+    var text = document.createElement('textarea')
+    text.id = 'NewText'
+    text.innerHTML = textValue
+    var textP = document.createElement('p')
+    textP.append(text)
+    container.append(textP)
+    //color
+    var colorValue = localStorage.getItem(`color${i}`)
+    var color = document.createElement('input')
+    color.id = 'NewColor'
+    color.type = 'color'
+    color.value = colorValue
+    var colorP = document.createElement('p')
+    colorP.append('color')
+    container.append('colorP')
+
+    var buttons = document.createElement('p')
+    var btnAccept = document.createElement('button')
+    btnAccept = innerHTML = 'Accept'
+    buttons.classList.add('btndel')
+    btnAccept.addEventListener('click', function(){ Edit(i) } )
+    btnAccept.append(buttons)
+
+    var btnCancel = document.createElement('button')
+    btnCancel.innerHTML = 'Cancel'
+    btnAccept.classList.add('btndel')
+    btnAccept.addEventListener('click', Show )
+    btnCancel.append(buttons)
+
+    container.append(buttons)
+    document.querySelector(`#listOfNotes`).append(container)
+}   
+
+function Edit(i) {
+    var newTitle = document.querySelector('#NewTitle').value
+    var newText = document.querySelector('#NewText').value
+    var newColor = document.querySelector('#NewColor').value
+    var newPin = document.querySelector('#NewPin').checked
+
+    localStorage.removeItem(`title${i}`);
+    localStorage.removeItem(`text${i}`);
+    localStorage.removeItem(`color${i}`);
+    localStorage.removeItem(`date${i}`);
+
+    localStorage.setItem(`title${i}`, newTitle)
+    localStorage.setItem(`text${i}`, newText)
+    localStorage.setItem(`color${i}`, newColor)
+    localStorage.setItem(`pin${i}`, newPin)
+
+    Show()
+}
+
+function btnEdit(n) {
+    document.querySelector(`#listOfNotes`).innerHTML = ``
+
+        for(let i=0; i<localStorage.length * 10; i++) {
+            if(localStorage.getItem(`title${i}`) != null){
+                if(localStorage.getItem(`pin${i}`) === 'true')
+                {
+                    if ( n === i){
+                        createEditNote(i)
+                    }
+                    else 
+                    {
+                        createNote(i)
+                    }
+                }
+            }
+        }
+        for(let i=0; i<localStorage.length * 10; i++) {
+            if(localStorage.getItem(`title${i}`) != null){
+                if(localStorage.getItem(`pin${i}`) === 'false')
+                {
+                    if ( n === i){
+                        createEditNote(i)
+                    }
+                    else 
+                    {
+                        createNote(i)
+                    }
+                }
+            }
+        }
 }
 
