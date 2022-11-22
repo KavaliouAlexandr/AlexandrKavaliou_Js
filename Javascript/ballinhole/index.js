@@ -1,38 +1,57 @@
-const ball = document.getElementById("#ball");
-const gamearea = document.getElementById("#gamearea");
+const ball = document.querySelector("#ball");
+const gamearea = document.querySelector("#gamearea");
 
-// const maxX = gamearea.clientWidth - ball.clientWidth;
-// const maxY = gamearea.clientHeight - ball.clientHeight;
+var defaultAlpha
+var defaultBeta
+var defaultGamma
+var animFrame
+var PosY = 90
+var PosX = 90
 
 function onDeviceMove(event) {
-  let x = event.beta; // In degree in the range [-180,180)
-  let y = event.gamma; // In degree in the range [-90,90)
 
-  if (x > 90) {
-    x = 90;
-  }
-  if (x < -90) {
-    x = -90;
-  }
+    if(defaultAlpha === undefined)
+    {
+        defaultAlpha = event.alpha
+        defaultBeta = event.beta
+        defaultGamma = event.gamma
+    }
 
-  // To make computation easier we shift the range of
-  // x and y to [0,180]
-  x += 90;
-  y += 90;
 
-  // 10 is half the size of the ball
-  // It center the positioning point to the center of the ball
-  ball.style.top = `${(maxY * y) / 180 - 10}px`;
-  ball.style.left = `${(maxX * x) / 180 - 10}px`;
+    var moveY = (event.beta - defaultBeta) / 19
+    var moveX = (event.gamma - defaultGamma) / 19
+
+    
+    if(animFrame !== undefined){
+        cancelAnimationFrame(animFrame)
+    }
+
+    animate(moveY, moveX)
+}
+
+function animate(moveY, moveX) {
+
+    PosY = PosY + moveY
+    ball.style.top = PosY + 'px'
+
+    PosX = PosX + moveX
+    ball.style.left = PosX + 'px'
+
+    // var a = 2
+    // var b = 4
+
+
+    // var c = a + b
+
+
+    // a = a + b
+    // c = a
+
+    
+    console.log(Date.now())
+    //repeat animetion func
+    animFrame = requestAnimationFrame(function(){animate(moveY, moveX)})
 }
 
 window.addEventListener('deviceorientation', onDeviceMove, true)
-// window.addEventListener("devicemotion", onDeviceMove, true);
 
-
-function animate() {
-    //    console.log(Date.now())
-    // requestAnimationFrame(animate)
-}
-
-requestAnimationFrame(animate)
