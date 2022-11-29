@@ -7,10 +7,9 @@ var defaultGamma
 var animFrame
 var PosY = 150
 var PosX = 296
-// var HallX = 296
-// var HallY = 550 
-// var HallWidth = 50
-
+var score = 0
+// main.innerHTML='Score ' + score
+// console.log(score)
 function onDeviceMove(event) {
 
     if(defaultAlpha === undefined)
@@ -78,15 +77,17 @@ function animate(moveY, moveX) {
         // clearInterval(interval);
     }
 
-    if(PosX > 250 && PosX < 346 && PosY > 525 && PosY < 600)
+    if(PosX > 260 && PosX < 355 && PosY > 525 && PosY < 600)
     {
-        alert("You Win");
-        document.location.reload();
-        clearInterval(interval);
+        score = score + 1
+        PosX = 296
+        PosY = 150
+        console.log(score)
+        document.getElementById("score").innerHTML = score;
     }
 
 
-    console.log(Date.now())
+    // console.log(Date.now())
     //repeat animetion func
     animFrame = requestAnimationFrame(function(){animate(moveY, moveX)})
 }
