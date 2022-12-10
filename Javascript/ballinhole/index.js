@@ -8,8 +8,7 @@ var animFrame
 var PosY = 150
 var PosX = 296
 var score = 0
-// main.innerHTML='Score ' + score
-// console.log(score)
+
 function onDeviceMove(event) {
 
     if(defaultAlpha === undefined)
