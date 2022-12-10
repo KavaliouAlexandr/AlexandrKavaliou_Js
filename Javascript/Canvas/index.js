@@ -38,11 +38,13 @@ function draw() {
     ball.sx = -ball.sx;
   }
 
-  raf = window.requestAnimationFrame(draw);
+  window.requestAnimationFrame(draw);
 }
 
-canvas.addEventListener('mouseover', function(e) {
-  raf = window.requestAnimationFrame(draw);
-});
 
-ball.draw();
+
+for(let i = 0; i < 10; i++)
+{
+}
+
+window.requestAnimationFrame(draw);
