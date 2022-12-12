@@ -3,6 +3,8 @@ var ctx = canvas.getContext('2d');
 
 canvas.width = '750'
 canvas.height = '550'
+// canvas.width = window.innerWidth
+// canvas.height = window.innerHeight
 const distance = canvas.width * 0.2
 
 class Ball {
@@ -27,11 +29,7 @@ class Ball {
     ctx.fillStyle = this.color;
     ctx.fill();
     
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius - 2, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = 'white';
-    ctx.fill();
+    
     
   }
 };
@@ -57,6 +55,14 @@ function drawBalls(balls) {
       
     }
 
+    
+  }
+  for (let i = 0; i < balls.length; i++){
+    ctx.beginPath();
+    ctx.arc(balls[i].x, balls[i].y, balls[i].radius - 2, 0, Math.PI * 2, true);
+    ctx.closePath();
+    ctx.fillStyle = 'white';
+    ctx.fill();
     if (balls[i].y + balls[i].sy > canvas.height || balls[i].y + balls[i].sy < 0) {
       balls[i].sy = -balls[i].sy;
     }
