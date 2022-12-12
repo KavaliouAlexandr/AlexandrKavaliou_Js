@@ -1,6 +1,9 @@
 const canvas = document.querySelector("#balls");
 var ctx = canvas.getContext('2d');
 
+canvas.width = '750'
+canvas.height = '550'
+const distance = canvas.width * 0.2
 
 class Ball {
   x
@@ -40,16 +43,33 @@ function drawBalls(balls) {
   ctx.clearRect(0,0, canvas.width, canvas.height);
   for (let i = 0; i < balls.length; i++){
     balls[i].draw();
-    balls[i].x += balls[i].sx;
-    balls[i].y += balls[i].sy;
+
+    for (let j = 0; j < balls.length; j++) {
+      var ballsDistance = ((balls[i].x - balls[j].x)**2 + (balls[i].y - balls[j].y)**2)**(1/2)
+      if(ballsDistance < distance && ballsDistance > 0) {
+        ctx.beginPath()
+        ctx.moveTo(balls[i].x, balls[i].y)
+        ctx.lineTo(balls[j].x, balls[j].y)
+        ctx.lineTo(balls[i].x, balls[i].y)
+        ctx.closePath()
+        ctx.stroke()
+      }
+      
+    }
+
     if (balls[i].y + balls[i].sy > canvas.height || balls[i].y + balls[i].sy < 0) {
       balls[i].sy = -balls[i].sy;
     }
     if (balls[i].x + balls[i].sx > canvas.width || balls[i].x + balls[i].sx < 0) {
       balls[i].sx = -balls[i].sx;
     }
+    if(i == 1){
+      console.log(balls[i].x)
+    }
+    balls[i].x += balls[i].sx;
+    balls[i].y += balls[i].sy;
   }
-  window.requestAnimationFrame(function(){drawBalls(balls)});
+  requestAnimationFrame(function(){drawBalls(balls)});
 }
 
 function getRandom(min, max) {
@@ -57,15 +77,15 @@ function getRandom(min, max) {
 }
 
 var balls = new Array()
-for(let i = 0; i < 10; i++)
+for(let i = 0; i < 50; i++)
 {
-  balls[i] = new Ball(`${i}`, 
-  getRandom(0, canv.width), 
-  getRandom(0, canv.height), 
+  balls[i] = new Ball(
+  getRandom(0, canvas.width), 
+  getRandom(0, canvas.height), 
   getRandom(-1.5, 1.5), 
   getRandom(-1.5, 1.5))
 }
 
 
 
-window.requestAnimationFrame(function(){drawBalls(balls)});
+requestAnimationFrame(function(){drawBalls(balls)});
