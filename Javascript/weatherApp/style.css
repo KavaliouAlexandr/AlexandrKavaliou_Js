@@ -7,6 +7,15 @@ h1 {
   margin: 20px 0;
 }
 
+#form input[type="text"] {
+  width: 300px;
+  height: 36px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+
 #town-form {
   display: flex;
   align-items: center;
