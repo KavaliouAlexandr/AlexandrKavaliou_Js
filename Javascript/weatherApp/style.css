@@ -7,7 +7,17 @@ h1 {
   margin: 20px 0;
 }
 
-#form input[type="text"] {
+#town-form {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#town-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#town-form input[type="text"] {
   width: 300px;
   height: 36px;
   font-size: 16px;
@@ -16,16 +26,17 @@ h1 {
   padding: 0 10px;
 }
 
-#town-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0;
+#town-form button[type="submit"] {
+  width: 100px;
+  height: 36px;
+  font-size: 16px;
+  background-color: #00bcd4;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-#town-form label {
-  margin-right: 10px;
-}
 
 #town-list {
   list-style: none;
