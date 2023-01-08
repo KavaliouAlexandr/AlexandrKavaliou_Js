@@ -1,22 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Weather App</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <div id="app">
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
     <h1>Weather App</h1>
-    <form id="form">
-      <label for="town-input">Enter a town name:</label>
-      <input type="text" id="town-input">
-      <button type="submit">Add</button>
+    <form id="town-form">
+      <label for="town-input">Enter a town:</label>
+      <input type="text" id="town-input" />
+      <button type="submit">Add Town</button>
     </form>
-    <div id="towns">
-      
-    </div>
-  </div>
-  <script src="./index.js"></script>
-</body>
+    <ul id="town-list"></ul>
+  </body>
+  <script src="index.js"></script>
 </html>
