@@ -17,6 +17,19 @@ h1 {
   margin-bottom: 10px;
 }
 
+.towns {
+  width: 100px;
+  height: 36px;
+  font-size: 16px;
+  background-color: #00bcd4;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
 #town-form input[type="text"] {
   width: 300px;
   height: 36px;
